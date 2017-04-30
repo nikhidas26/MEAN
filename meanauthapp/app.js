@@ -11,7 +11,7 @@ mongoose.connect(config.database);
 
 //DB Connection
 mongoose.connection.on('connected',  () => {
-    console.log('Connected to database');
+    console.log('Connected to database: ' + config.database);
 });
 
 //DB Error
@@ -35,6 +35,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //Body parser middle ware - parses incoming request data
 app.use(bodyParser.json());
+
+// Passports middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
+require('./config/passport')(passport);
 
 //app.route('/users');
 app.use('/users', users);
