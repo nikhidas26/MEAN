@@ -1,2 +1,3 @@
 # Ignoring node_modules
 meanauthapp/node_modules
+meanauthapp/angular-src/node_modules
