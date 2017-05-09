@@ -1,3 +1,5 @@
 # Ignoring node_modules
 meanauthapp/node_modules
 meanauthapp/angular-src/node_modules
+nikhildasnomula/node_modules
+nikhildasnomula/angular-src/node_modules

@@ -1,0 +1,29 @@
+1) Creation of a node project from scratch
+
+Have npm installed 
+
+Create a directory for the app that you want to create
+
+cd into that directory
+
+run npm init
+
+Take the default, you can title your app, author name and may be want to change index.js to app.js
+
+run npm install 
+
+create app.js file in this folder
+
+install nodemon globally using sudo npm install -g nodemon
+
+any changes made to our code will automatically be updated.
+
+we need cors to access our requests from a different domain
+
+Google express cors 
+
+Use body parser middle ware to parse the requests
+
+Set up your routes!
+
+Set the static folder, which will be the placeholder for all of your client side files.
