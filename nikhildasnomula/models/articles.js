@@ -32,8 +32,13 @@ const ArticlesSchema = mongoose.Schema({
 const Articles = module.exports = mongoose.model('articles', ArticlesSchema);
 
 module.exports.getArticleByTitle = function (title, callback) {
-  console.log("Fetching article by title");
+  console.log("Fetching article by title: " + title);
   const query = {title: title};
-  console.log(query);
   Articles.findOne(query, callback);
+}
+
+module.exports.getArticleByCategory = function (category, callback) {
+  console.log("Fetching article by category: " + category);
+  const query = {category: category};
+  Articles.find(query, callback).sort({created_date: -1});
 }

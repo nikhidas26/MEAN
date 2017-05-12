@@ -74,11 +74,20 @@ router.get('/profile', passport.authenticate('jwt', {session:false}), (req, res,
   res.json({user:req.user});
 });
 
+
+// Move these two calls to a seperate articles routes file
 router.get('/articles/calisthenics',(req,res,next) => {
   Articles.getArticleByTitle("Calisthenics", (err, article) => {
     if(err) throw err;
     res.json(article);
-    console.log(article.sub_category);
+  });
+});
+
+router.get('/articles',(req,res,next) => {
+  const category = req.query.category;
+  Articles.getArticleByCategory(category, (err, article) => {
+    if(err) throw err;
+    res.json(article);
   });
 });
 

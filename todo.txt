@@ -1,0 +1,5 @@
+Use routing to determine the category and display the latest article in that category
+
+In the side bar include titles to other articles in that category which adds in the route parameter title and category
+
+

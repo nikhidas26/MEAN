@@ -17,22 +17,25 @@
           <li><a [routerLink]="['/']"> Home</a></li>
           <li><a [routerLink]="['/aboutme']"> About me</a></li>
           <li class="dropdown" dropdown>
-  							<a dropdownToggle href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
+  							<a dropdownToggle class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
   							<ul *dropdownMenu class="dropdown-menu" role="menu">
-  							<li role="menuitem"><a href="personaldevelopment.php">Personal Development</a></li>
-  							<li role="menuitem"><a href="technology.php">Technology</a></li>
-  							<li role="menuitem"><a href="healthandfitness/calisthenics.php">Health and fitness</a></li>
+  							<li role="menuitem"><a [routerLink]="['/blog/technology']">Technology</a></li>
+  							<li role="menuitem"><a [routerLink]="['/blog/self-development']">Self Development</a></li>
+  							<li role="menuitem"><a [routerLink]="['/blog/fitness']">Fitness</a></li>
+                <li role="menuitem"><a [routerLink]="['/blog/health']">Health</a></li>
+                <li role="menuitem"><a [routerLink]="['/blog/travel']">Travel</a></li>
   							</ul>
   				</li>
 
         </ul>
 
+        <!-- TODO: Will add in log in and logout modules later
         <ul class="nav navbar-nav navbar-right">
 
           <li><a>Login</a></li>
           <li><a href="#">Logout</a></li>
         </ul>
-
+        -->
       </div><!--/.navbar-collapse -->
     </div>
   </nav>

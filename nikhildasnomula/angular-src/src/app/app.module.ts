@@ -18,13 +18,14 @@ import { UsComponent } from './components/us/us.component';
 import { TravelComponent } from './components/travel/travel.component';
 import { BlogComponent } from './components/blog/blog.component';
 
+import { ArticlesService } from './services/articles.service';
+
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'aboutme', component: AboutmeComponent},
   {
-    path: 'blog/:title',
-    component: BlogComponent,
-    //data: {title: "Calisthenics"}
+    path: 'blog/:category',
+    component: BlogComponent
   },
   {path: 'selfdevelopment', component: SelfdevelopmentComponent},
   {path: 'us', component: UsComponent},
@@ -52,7 +53,7 @@ const appRoutes: Routes = [
     AlertModule.forRoot(),
     BsDropdownModule.forRoot()
   ],
-  providers: [],
+  providers: [ArticlesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
